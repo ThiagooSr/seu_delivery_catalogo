@@ -30,8 +30,8 @@ try {
 
 
 $nome_sistema = 'Delivery Interativo';
-$email_sistema = 'thiagoosouzarodrigues@gmail.com';
-$telefone_sistema = '(62) 99173-0552';
+$email_sistema = 'atendimento@seudelivery.site';
+$telefone_sistema = '(63) 9212-0354';
 
 
 
