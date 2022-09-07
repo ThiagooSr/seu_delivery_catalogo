@@ -3,21 +3,21 @@
 //dados locais
 $usuario = 'root';
 $senha = '';
-$banco = 'delivery_interativo';
+$banco = 'seudelivery';
 $servidor = 'localhost';
 
 
 //servidor hospedado
-$usuario = 'hugocu75_interativo';
+/*$usuario = 'hugocu75_interativo';
 $senha = 'interativoteste';
 $banco = 'hugocu75_interativo';
-$servidor = 'sh-pro24.hostgator.com.br';
+$servidor = 'sh-pro24.hostgator.com.br';*/
 
 
 $url_sistema = "http://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
 if($url[1] == 'localhost/'){
-	$url_sistema = "http://$_SERVER[HTTP_HOST]/delivery-interativo/";
+	$url_sistema = "http://$_SERVER[HTTP_HOST]/seuDeliveryCatalogo/";
 }
 
 date_default_timezone_set('America/Sao_Paulo');
@@ -29,9 +29,9 @@ try {
 }
 
 
-$nome_sistema = 'Delivery Interativo';
-$email_sistema = 'contato@hugocursos.com.br';
-$telefone_sistema = '(31) 97527-5084';
+$nome_sistema = 'Seu Delivery';
+$email_sistema = 'thiagoosouzarodrigues@gmail.com';
+$telefone_sistema = '(62) 99173-0552';
 
 
 
