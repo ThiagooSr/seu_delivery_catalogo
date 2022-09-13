@@ -3,7 +3,7 @@
 //dados locais
 $usuario = 'root';
 $senha = '';
-$banco = 'seudelivery';
+$banco = 'seuDelivery';
 $servidor = 'localhost';
 
 

@@ -59,6 +59,7 @@ $id = $_POST['id'];
 	
 	
 }
+
 </style>
 
 
