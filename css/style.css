@@ -5,7 +5,7 @@
 }
 
 body{
-	 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+	 font-size: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -109,9 +109,11 @@ body{
   right: 10px;   
   visibility: hidden;
   opacity: 0;
-  background: #fcfbeb;
+  background: #f4ecbde6;
   width:320px;
   max-height:500px;
+  border-radius: 5px;
+  
 }
 .overlay:target {
   visibility: visible;
@@ -141,17 +143,17 @@ body{
   color: #c23232;
 }
 
-
+/*Linha do carrinho*/
 .linha{
   margin:5px 0px;
 }
-
+/*Título do carrinho*/
 .titulo-popup{
   font-size:17px;
   font-weight: 500;
 }
 
-
+/*Fonte do conteudo do pedido*/
 .conteudo-popup{
   font-size:15px;
 }
@@ -341,6 +343,7 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: #333;
+  border-radius: 5px;
 }
 .popup2 .close:hover {
   color: #c23232;
@@ -402,6 +405,7 @@ body{
 .imagem-produto{
 	width:300px;
 	margin-top: 10px;
+  border-radius: 5px;
 }
 
 
@@ -500,7 +504,7 @@ body{
   padding:10px;
   color:#FFF;
    border:0px;
-  border-radius:0px;
+  border-radius:5px;
 }
 
 
@@ -510,12 +514,12 @@ body{
   padding:10px;
   color:#FFF;
   border:0px;
-  border-radius:0px;
+  border-radius:5px;
 }
 
 
 
-
+/*Aqui altera os gadgets do cardapio*/
 .badge2 {
   position: absolute;
   display: inline-block;
@@ -572,6 +576,7 @@ body{
 .imagem-produto{
   width:100%;  
   padding:0px 10px;
+  border-radius: 5px;
 }
 }
 

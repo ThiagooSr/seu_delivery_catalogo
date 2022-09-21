@@ -51,10 +51,10 @@ if($item == ""){
 }
  ?>
 
-<div class="main-container">
+<div class="container">
 
 	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-brand" >
 				<a href="produto-<?php echo $url ?>&sabores=<?php echo $sabores ?>"><big><i class="bi bi-arrow-left"></i></big></a>
 				<span style="margin-left: 15px"><?php echo $nome ?> <?php echo $item ?> <small><small> <?php echo $texto_sabor ?></small></small></span>

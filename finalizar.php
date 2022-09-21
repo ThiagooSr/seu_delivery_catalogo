@@ -75,10 +75,10 @@ $taxa_entregaF = number_format($taxa_entrega, 2, ',', '.');
 
  ?>
 
-  <div class="main-container">
+  <div class="container">
 
   <nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="index.php">
         <img src="img/<?php echo $logo_sistema ?>" alt="" width="30" height="30" class="d-inline-block align-text-top">
        Finalizar Pedido
@@ -355,10 +355,10 @@ $taxa_entregaF = number_format($taxa_entrega, 2, ',', '.');
  
  </span>
  <br>
-  <big>
+  <div>
     <span><b>TOTAL À PAGAR</b></span>
     <span class="direita">  <b>R$ <span id="total-carrinho-finalizar"><?php echo $total_carrinhoF ?></span></b></span>
-  </big>
+  </div>
 </div>
 
 

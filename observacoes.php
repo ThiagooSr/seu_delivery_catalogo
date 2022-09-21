@@ -167,10 +167,10 @@ $total_ing = @count($res);
 </style>
 
 
-<div class="main-container" style="background:#fff;">
+<div class="container" style="background:#fff;">
 
 	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-brand" >
 				<?php if($total_adc > 0 || $total_ing > 0){ ?>
 				<a href="adicionais-<?php echo $url_completa ?>&sabores=<?php echo $sabores ?>"><big><i class="bi bi-arrow-left"></i></big></a>

@@ -58,10 +58,10 @@ $total_ing = @count($res);
 }
  ?>
 
-<div class="main-container">
+<div class="container">
 
 	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-brand" >
 				<?php if($sabores == 2){ ?>
 				<a href="2sabores-<?php echo $url_cat ?>&sabores=<?php echo $sabores ?>"><big><i class="bi bi-arrow-left"></i></big></a>
