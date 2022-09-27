@@ -5,7 +5,7 @@
 }
 
 body{
-	 font-size: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+	 font-size: -apple-system, BlinkMacSystemFon, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -203,14 +203,14 @@ body{
 
 
 .direita{
-	position:absolute;
+	position:static;
 	right: 15px;
 }
 
 
 .abaixo{
 	position:absolute;
-	bottom: 0px;
+	bottom: 10px;
 	width:100%;
 }
 
@@ -268,16 +268,18 @@ body{
 	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
 	font-size: 14px;	
 	font-weight: 400;
-	position:absolute;
-	bottom: 50px;
+	position:static;
+	bottom: 60px;
 	width:100%;
 	background: #FFF;
+
 }
 
 
 .botao-carrinho{	
 	border-radius: 0px;
 	height:45px;
+  
 }
 
 .area-pedidos{
@@ -641,3 +643,4 @@ body{
   margin:2px;
   font-size:11px;  
 }
+

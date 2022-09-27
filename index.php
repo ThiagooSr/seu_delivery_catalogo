@@ -60,7 +60,7 @@ if(strtotime($hora_atual) > strtotime($horario_abertura) and strtotime($hora_atu
 
 <div class="container">
 
-	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+	<nav class="navbar bg-light" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
 		<div class="container">
 			<a class="navbar-brand" href="index.php">
 				<img src="img/<?php echo $logo_sistema ?>" alt="" width="30" height="30" class="d-inline-block align-text-top">

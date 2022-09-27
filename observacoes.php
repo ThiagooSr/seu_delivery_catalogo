@@ -169,7 +169,7 @@ $total_ing = @count($res);
 
 <div class="container" style="background:#fff;">
 
-	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+	<nav class="navbar bg-light" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
 		<div class="container">
 			<div class="navbar-brand" >
 				<?php if($total_adc > 0 || $total_ing > 0){ ?>
@@ -224,8 +224,8 @@ $total_ing = @count($res);
 </div>
 
 
-<div class="d-grid gap-2 mt-4 abaixo">
-	<a href='#popup2' class="btn btn-primary botao-carrinho"><?php echo $texto_botao ?></a>
+<div class="d-grid gap-2 mt-4">
+	<a href='#popup2' class="btn btn-primary "><?php echo $texto_botao ?></a>
 </div>
 
 

@@ -22,7 +22,7 @@ if($sabores != "2"){
 
 <div class="container">
 
-	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+	<nav class="navbar bg-light" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
 		<div class="container">
 			<div class="navbar-brand" >
 				<a href="index"><big><i class="bi bi-arrow-left"></i></big></a>

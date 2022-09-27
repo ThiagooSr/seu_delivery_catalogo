@@ -6,6 +6,8 @@ $sessao = $_SESSION['sessao_usuario'];
 
 ?>
 
+
+
 <style type="text/css">
 	body{
 		background:#f2f2f2;
@@ -14,7 +16,7 @@ $sessao = $_SESSION['sessao_usuario'];
 
 <div class="container">
 
-	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+	<nav class="navbar bg-light" style="background-color: #e3f2fd;">
 		<div class="container">
 			<div class="navbar-brand" >
 				<a href="index"><big><i class="bi bi-arrow-left"></i></big></a>
