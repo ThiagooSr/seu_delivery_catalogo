@@ -50,7 +50,8 @@ $sessao = $_SESSION['sessao_usuario'];
 	</div>
 
 
-	<div class="d-grid gap-2 mt-4 abaixo">
+	<div class="d-grid gap-2 col-6 mx-auto">
+    <span></span>
 		<a href='finalizar' class="btn btn-primary botao-carrinho">Finalizar Pedido</a>
 	</div>
 </div>

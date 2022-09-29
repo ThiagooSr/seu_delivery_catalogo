@@ -263,22 +263,25 @@ body{
 
 
 .total-pedido{
-	padding:10px;
-	margin-top: 10px;
-	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+	padding:10px; /*preenchimento*/
+	margin-top: 10px; /*margem superior*/
+	box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); /*O box-shandow, e responsável pela sombra.*/
 	font-size: 14px;	
 	font-weight: 400;
 	position:static;
-	bottom: 60px;
-	width:100%;
+	bottom: 600px;
 	background: #FFF;
+  left: 50px;
+  margin-right: 7%;
+  margin-left: 7%;
 
 }
 
 
 .botao-carrinho{	
-	border-radius: 0px;
-	height:45px;
+	border-radius: 5px;
+	height:50px;
+  bottom: 5%;
   
 }
 
@@ -293,7 +296,7 @@ body{
 
 
 .overlay2 {
-  position: fixed;
+  position: static;
   bottom: 0px;    
   visibility: hidden;
   opacity: 0;
@@ -331,6 +334,7 @@ body{
 .popup2 {
   margin: 5px auto;
   padding: 10px 0px; 
+  
     
 }
 
@@ -360,7 +364,7 @@ body{
   padding: 10px;
   margin-top: 15px;
   border-radius: var(--size-radius);
-  border: 3px solid var(--color-shadow, #8c8b8b);
+  border: 3px solid var(--color-shadow, #d0d0d0);
   box-shadow: .5rem .5rem 0 var(--color-shadow, #8c8b8b);  
   
 }

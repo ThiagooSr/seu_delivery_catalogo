@@ -362,8 +362,8 @@ $taxa_entregaF = number_format($taxa_entrega, 2, ',', '.');
 </div>
 
 
-<div class="d-grid gap-2 mt-4">
-  <a href='#' onclick="finalizarPedido()" class="btn btn-primary">Concluir Pedido</a>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <a href='#' onclick="finalizarPedido()" class="btn btn-primary ">Concluir Pedido</a>
 </div>
 </div>
 

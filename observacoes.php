@@ -224,8 +224,10 @@ $total_ing = @count($res);
 </div>
 
 
-<div class="d-grid gap-2 mt-4">
-	<a href='#popup2' class="btn btn-primary "><?php echo $texto_botao ?></a>
+<div class="d-grid gap-2 col-6 mx-auto">
+	<span></span>
+	<a href='#popup2' class="btn btn-primary  "><?php echo $texto_botao ?></a>
+	<span></span>
 </div>
 
 

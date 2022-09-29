@@ -65,7 +65,7 @@ if($item == ""){
 		</div>
 	</nav>
 
-	<div id="listar-adicionais" style='margin-top: 70px;'>
+	<div id="listar-adicionais" style='margin-top: 50px;'>
 
 
 	
