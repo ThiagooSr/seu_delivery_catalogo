@@ -34,7 +34,7 @@ $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = @count($res);
 if($total_reg > 0){
 $nome = $res[0]['nome'];
-$descricao = $res[0]['descricao'];
+$descricaoP = $res[0]['descricao'];
 $foto = $res[0]['foto'];
 $id = $res[0]['id'];
 $valor = $res[0]['valor_venda'];
@@ -58,10 +58,10 @@ $total_ing = @count($res);
 }
  ?>
 
-<div class="container">
+<div class="main-container">
 
-	<nav class="navbar bg-light" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
-		<div class="container">
+	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+		<div class="container-fluid">
 			<div class="navbar-brand" >
 				<?php if($sabores == 2){ ?>
 				<a href="2sabores-<?php echo $url_cat ?>&sabores=<?php echo $sabores ?>"><big><i class="bi bi-arrow-left"></i></big></a>
@@ -151,7 +151,7 @@ $total_ing = @count($res);
 	<hr>
 	<div class="conteudo-descricao-item">
 	<div class="titulo-descricao-item"><b>Descrição <?php echo $nome ?></b></div>
-	<p class="descricao-item"><?php echo $descricao ?></p>
+	<p class="descricao-item"><?php echo $descricaoP ?></p>
 	</div>
 	<div >
 		<img class="imagem-produto" src="sistema/painel/images/produtos/<?php echo $foto ?>">

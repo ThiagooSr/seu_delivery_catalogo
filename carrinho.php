@@ -6,22 +6,27 @@ $sessao = $_SESSION['sessao_usuario'];
 
 ?>
 
-
-
 <style type="text/css">
 	body{
 		background:#f2f2f2;
 	}
 </style>
 
-<div class="container">
+<div class="main-container">
 
-	<nav class="navbar bg-light" style="background-color: #e3f2fd;">
-		<div class="container">
+	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+		<div class="container-fluid">
 			<div class="navbar-brand" >
 				<a href="index"><big><i class="bi bi-arrow-left"></i></big></a>
 				<span style="margin-left: 15px">RESUMO DO PEDIDO</span>
+
 			</div>
+
+      <a class="text-dark" href="index.php" >
+          <div class="d-flex carrinho" style="color:blue"> 
+            <small><small>Comprar Mais?</small></small>
+          </div>
+        </a>
 
 			
 
@@ -39,7 +44,10 @@ $sessao = $_SESSION['sessao_usuario'];
 
 
 
+
+
 </div>
+
 
 <div class="area-pedidos">
 	<div class="total-pedido">
@@ -50,8 +58,7 @@ $sessao = $_SESSION['sessao_usuario'];
 	</div>
 
 
-	<div class="d-grid gap-2 col-6 mx-auto">
-    <span></span>
+	<div class="d-grid gap-2 mt-4 abaixo">
 		<a href='finalizar' class="btn btn-primary botao-carrinho">Finalizar Pedido</a>
 	</div>
 </div>
@@ -70,7 +77,7 @@ $sessao = $_SESSION['sessao_usuario'];
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><span id="nome_item"></span></h5>
-        <button type="button" id="btn-fechar-obs" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" id="btn-fechar-obs" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <form id="form-obs">
       <div class="modal-body">
@@ -101,7 +108,7 @@ $sessao = $_SESSION['sessao_usuario'];
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><span id="nome_item_adc"></span></h5>
-        <button type="button" id="btn-fechar-adc" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" id="btn-fechar-adc" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       
       <div class="modal-body">    
