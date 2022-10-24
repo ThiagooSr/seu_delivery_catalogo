@@ -30,8 +30,8 @@ try {
 
 
 $nome_sistema = 'Delivery Interativo';
-$email_sistema = 'contato@hugocursos.com.br';
-$telefone_sistema = '(31) 97527-5084';
+$email_sistema = 'thiagoosouzarodrigues@gmail.com';
+$telefone_sistema = '(62) 99173-0552';
 
 
 
