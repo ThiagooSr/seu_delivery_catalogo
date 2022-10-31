@@ -1,9 +1,9 @@
 <?php 
 
 //dados locais
-$usuario = 'root';
-$senha = '';
-$banco = 'deliveryteste';
+$usuario = 'u384352927_seudelivery';
+$senha = 'Thiago199@';
+$banco = 'u384352927_delivery_inter';
 $servidor = 'localhost';
 
 
@@ -17,7 +17,7 @@ $servidor = 'sh-pro24.hostgator.com.br';*/
 $url_sistema = "http://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
 if($url[1] == 'localhost/'){
-	$url_sistema = "http://$_SERVER[HTTP_HOST]/delivery-interativo/";
+	$url_sistema = "http://$_SERVER[HTTP_HOST]/seudelivery.site/";
 }
 
 date_default_timezone_set('America/Sao_Paulo');
