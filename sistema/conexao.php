@@ -1,7 +1,7 @@
 <?php 
 
 //dados locais
-$usuario = 'u384352927_seudelivery';
+$usuario = 'u384352927_seudeliveri';
 $senha = 'Thiago199@';
 $banco = 'u384352927_delivery_inter';
 $servidor = 'localhost';
