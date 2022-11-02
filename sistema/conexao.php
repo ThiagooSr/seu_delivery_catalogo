@@ -29,7 +29,7 @@ try {
 }
 
 
-$nome_sistema = 'Delivery Interativo';
+$nome_sistema = 'Delivery';
 $email_sistema = 'thiagoosouzarodrigues@gmail.com';
 $telefone_sistema = '(62) 99173-0552';
 
