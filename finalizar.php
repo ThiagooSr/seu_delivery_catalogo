@@ -79,13 +79,22 @@ if($id_usuario != ''){
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body" align="center">
        <img src="img/user.png" width="50px" height="50px" >
+       <p></p>
 
        <?php if($id_usuario == ""){ ?>
-       <div class="nome_user"> <input onclick="buscarNome()" type="text" class="input" name="nome" id="nome" required value="" placeholder="Seu Nome" style="width:150px; text-align: center; border:0"></div >
-       <input onkeyup="buscarNome()" type="text" class="input telefone_user" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="width:150px; text-align: center; border:0; margin-top: -15px">
+       <div class="nome_user, form-group"> 
+        <label for="nome"></label>
+        
+        <input onclick="buscarNome()" type="text" class="input, form-group" name="nome" id="nome" required value="" placeholder="Insira o seu nome" style="text-align: center; border-radius: 5px;">
+      </div >
+       <p></p>
+       <input onkeyup="buscarNome()" type="text" class="input, telefone_user" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="text-align: center; border-radius:5px">
      <?php }else{ ?>
-       <div class="nome_user"> <input type="text" class="input" id="nome" value="" placeholder="Nome Cliente" style="width:150px; text-align: center; border:0"></div >
-       <select class="input telefone_user" name="mesa" id="mesa" style="width:100px; text-align: center; border:0; margin-top: -15px">
+       <div class="nome_user, form-group"> 
+       <label for="nome"></label>
+        <input type="text" class="input, form-group" id="nome" value="" placeholder="Nome Cliente" style="text-align: center; border-radius: 5px;">
+      </div >
+       <select class="input telefone_user" name="mesa" id="mesa" style="text-align: center; border-radius: 5px;">
         <option value="0">Mesa</option>
 
         <?php 

@@ -10,13 +10,13 @@
 
 
 
-<div id="popup1" class="overlay">
+<div id="popup1" class="overlay" >
 	<div class="popup">
 		<div class="row">
 			<div class="col-9">
 				<h3 class="titulo-popup">SUB TOTAL <b>R$ <span id="total-carrinho-icone"></span></b></h3>
 			</div>
-			<div class="col-3">
+			<div class="col-4">
 				<a class="close" href="#">&times;</a>
 			</div>
 		</div>

@@ -49,7 +49,7 @@ $mais_sabores = $res[0]['mais_sabores'];
 </div>
 <ol class="list-group ">
 <?php }else{ ?>
-	<ol class="list-group " style="margin-top: 65px">
+	<ol class="list-group " style="margin-top: 65px" >
 <?php } ?>
 
 		<?php 
@@ -110,6 +110,7 @@ $total_adc = @count($res3);
 		<a href="<?php echo $url_produto ?>" class="link-neutro">
 		<li class="list-group-item d-flex justify-content-between align-items-start "> 
 			
+			
 				<img class="<?php echo $mostrar ?>" src="img/esgotado.png" width="65px" height="65px" style="position:absolute; right:0; top:0px">
 				<div class="row" style="width:100%">
 					<div class="col-10">
@@ -153,7 +154,7 @@ $query2 = $pdo->query("SELECT * FROM variacoes where produto = '$id' and ativo =
 
 	
 
-</div>
+ </div>
 			
 		</li>
 		</a>

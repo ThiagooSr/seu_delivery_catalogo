@@ -150,6 +150,7 @@ $total_ing = @count($res);
 
 	<hr>
 	<div class="conteudo-descricao-item">
+		<p></p>
 	<div class="titulo-descricao-item"><b>Descrição <?php echo $nome ?></b></div>
 	<p class="descricao-item"><?php echo $descricaoP ?></p>
 	</div>
