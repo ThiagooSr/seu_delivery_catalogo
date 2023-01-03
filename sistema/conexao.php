@@ -1,17 +1,17 @@
 <?php 
 
-//dados locais
+/*dados locais
 $usuario = 'root';
 $senha = '';
 $banco = 'seudelivery';
+$servidor = 'localhost';*/
+
+
+//servidor hospedado
+$usuario = 'u384352927_seudelivery';
+$senha = 'Thiago199@';
+$banco = 'u384352927_delivery_inter';
 $servidor = 'localhost';
-
-
-/*servidor hospedado
-$usuario = 'hugocu75_interativo';
-$senha = 'interativoteste';
-$banco = 'hugocu75_interativo';
-$servidor = 'sh-pro24.hostgator.com.br';*/
 
 
 $url_sistema = "http://$_SERVER[HTTP_HOST]/";

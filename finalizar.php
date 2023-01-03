@@ -82,17 +82,17 @@ if($id_usuario != ''){
        <p></p>
 
        <?php if($id_usuario == ""){ ?>
-       <div class="nome_user, form-group"> 
-        <label for="nome"></label>
+       <div class="nome_user"> 
+        
         
         <input onclick="buscarNome()" type="text" class="input, form-group" name="nome" id="nome" required value="" placeholder="Insira o seu nome" style="text-align: center; border-radius: 5px;">
       </div >
        <p></p>
        <input onkeyup="buscarNome()" type="text" class="input, telefone_user" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="text-align: center; border-radius:5px">
      <?php }else{ ?>
-       <div class="nome_user, form-group"> 
-       <label for="nome"></label>
-        <input type="text" class="input, form-group" id="nome" value="" placeholder="Nome Cliente" style="text-align: center; border-radius: 5px;">
+       <div class="nome_user"> 
+       
+        <input type="text" class="input" id="nome" value="" placeholder="Nome Cliente" style="text-align: center; border-radius: 5px;">
       </div >
        <select class="input telefone_user" name="mesa" id="mesa" style="text-align: center; border-radius: 5px;">
         <option value="0">Mesa</option>
@@ -165,7 +165,7 @@ if($id_usuario != ''){
 <div class="accordion-item <?php echo $esconder_opc_delivery ?>">
   <h2 class="accordion-header" id="headingThree">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="colapse-3">
-      3 - ENDEREÇO OU UNIDADE DE RETIRADA
+      3 - SEU ENDEREÇO, OU ESCOLHA O LOCAL DE RETIRADA.
     </button>
   </h2>
   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -302,7 +302,7 @@ if($id_usuario != ''){
    <div id="pagar_pix" style="margin-top: 15px">
      <b>Pagar com Pix </b><br>
      Chave <?php echo $tipo_chave ?> <br> <input type="text" id="chave_pix_copia" value="<?php echo $chave_pix ?>" style="background: transparent; border:none;" readonly> <a class="link-neutro" href="#" onClick="copiar()"><i class="bi bi-clipboard text-primary"></i> <small><small>Copiar Pix</small></small> </a><br>
-     <small>Ao efetuar o pagamento nos encaminhar o comprovante no whatsapp <span style="margin-left: 15px"><a target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone=<?php echo $whatsapp_sistema ?>" class="link-neutro"><i class="bi bi-whatsapp text-success"></i> <?php echo $telefone_sistema ?></a></span> </small>
+     <small>Ao efetuar o pagamento nos encaminhar o comprovante no whatsapp.<span style="margin-left: 15px"><a target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone=<?php echo $whatsapp_sistema ?>" class="link-neutro"><i class="bi bi-whatsapp text-success"></i> <?php echo $telefone_sistema ?></a></span> </small>
    </div>
 
 
@@ -317,7 +317,7 @@ if($id_usuario != ''){
         <input type="number" class="input" name="troco" id="troco">
         <span class="highlight"></span>
         <span class="bar"></span>
-        <label class="label">Vou precisar de troco para</label>
+        <label class="label">Vou precisar de troco para.</label>
       </div>
     </div>
   </div>
@@ -328,12 +328,12 @@ if($id_usuario != ''){
 
 <div id="pagar_credito" style="margin-top: 15px">
  <b>Pagar com Cartão de Crédito </b><br>       
- <small>O Pagamento será efetuado no ato da entrega com cartão de crédito</small>
+ <small>O Pagamento será efetuado no ato da entrega com cartão de crédito.</small>
 </div>
 
 <div id="pagar_debito" style="margin-top: 15px">
  <b>Pagar com Cartão de Débito </b><br>       
- <small>O Pagamento será efetuado no ato da entrega com cartão de débito</small>
+ <small>O Pagamento será efetuado no ato da entrega com cartão de débito.</small>
 </div>
 
 
