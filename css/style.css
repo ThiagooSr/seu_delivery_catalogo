@@ -56,7 +56,6 @@ body{
 
 .carrinho{
 	margin-right: 10px;
-  
 }
 
 
@@ -110,10 +109,9 @@ body{
   right: 10px;   
   visibility: hidden;
   opacity: 0;
-  background-color: rgba(100, 125, 127, 0.721);
+  background: #fcfbeb;
   width:320px;
   max-height:500px;
-  border-radius: 5%;
 }
 .overlay:target {
   visibility: visible;
@@ -122,11 +120,8 @@ body{
 
 
 .popup {
-  
+  margin: 5px auto;
   padding: 10px; 
-  border-radius: 5%;
-  background-color: rgba(100, 125, 127, 0.721);
- 
     
 }
 
@@ -241,7 +236,7 @@ body{
 
 
 .descricao-item{	
-	font-size: 14px;
+	font-size: 13px;
 	margin-top: 10px;
 }
 
@@ -287,9 +282,6 @@ body{
 .botao-carrinho{	
 	border-radius: 0px;
 	height:45px;
-  
-  
-
 }
 
 .area-pedidos{
@@ -416,14 +408,12 @@ body{
 .imagem-produto{
 	width:300px;
 	margin-top: 10px;
-  border: none;
-  border-radius: 5%;
 }
 
 
 .carrinho-qtd{
 	text-align:right;
-	background: #ffffffad;
+	background: #ededed;
 	padding:10px;	
 	margin-top:10px;
 	font-size: 0;
@@ -452,7 +442,6 @@ body{
 	text-align:center;
 	display: inline-block;
 	font-size:17px;	
-  border-radius: 50%;
 }
 
 .qtd-item-carrinho{
@@ -517,7 +506,7 @@ body{
   padding:10px;
   color:#FFF;
    border:0px;
-  border-radius:5px;
+  border-radius:0px;
 }
 
 
@@ -527,7 +516,7 @@ body{
   padding:10px;
   color:#FFF;
   border:0px;
-  border-radius:5px;
+  border-radius:0px;
 }
 
 
@@ -589,8 +578,6 @@ body{
 .imagem-produto{
   width:100%;  
   padding:0px 10px;
-  border: none;
-  border-radius: 25;
 }
 }
 

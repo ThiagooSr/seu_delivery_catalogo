@@ -1,23 +1,23 @@
 <?php 
 
-/*dados locais
+//dados locais
 $usuario = 'root';
 $senha = '';
-$banco = 'seudelivery';
-$servidor = 'localhost';*/
-
-
-//servidor hospedado
-$usuario = 'u384352927_seudelivery';
-$senha = 'Thiago199@';
-$banco = 'u384352927_delivery_inter';
+$banco = 'delivery_interativo';
 $servidor = 'localhost';
 
+/*
+//servidor hospedado
+$usuario = 'hugocu75_interativo';
+$senha = 'interativoteste';
+$banco = 'hugocu75_interativo';
+$servidor = 'sh-pro24.hostgator.com.br';
+*/
 
 $url_sistema = "http://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
 if($url[1] == 'localhost/'){
-	$url_sistema = "http://$_SERVER[HTTP_HOST]/seudelivery.site/";
+	$url_sistema = "http://$_SERVER[HTTP_HOST]/delivery-interativo/";
 }
 
 date_default_timezone_set('America/Sao_Paulo');
@@ -29,9 +29,9 @@ try {
 }
 
 
-$nome_sistema = 'Delivery';
-$email_sistema = 'thiagoosouzarodrigues@gmail.com';
-$telefone_sistema = '(62) 99173-0552';
+$nome_sistema = 'Delivery Interativo';
+$email_sistema = 'contato@hugocursos.com.br';
+$telefone_sistema = '(31) 97527-5084';
 
 
 
@@ -69,6 +69,8 @@ $dias_apagar = $res[0]['dias_apagar'];
 $impressao_automatica = $res[0]['impressao_automatica'];
 $fonte_comprovante = $res[0]['fonte_comprovante'];
 $banner_rotativo = $res[0]['banner_rotativo'];
+$token = $res[0]['token'];
+$instancia = $res[0]['instancia'];
 
 $whatsapp_sistema = '55'.preg_replace('/[ ()-]+/' , '' , $telefone_sistema);
 }

@@ -79,22 +79,13 @@ if($id_usuario != ''){
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body" align="center">
        <img src="img/user.png" width="50px" height="50px" >
-       <p></p>
 
        <?php if($id_usuario == ""){ ?>
-       <div class="nome_user"> 
-        
-        
-        <input onclick="buscarNome()" type="text" class="input, form-group" name="nome" id="nome" required value="" placeholder="Insira o seu nome" style="text-align: center; border-radius: 5px;">
-      </div >
-       <p></p>
-       <input onkeyup="buscarNome()" type="text" class="input, telefone_user" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="text-align: center; border-radius:5px">
+       <div class="nome_user"> <input onclick="buscarNome()" type="text" class="input" name="nome" id="nome" required value="" placeholder="Seu Nome" style="width:150px; text-align: center; border:0"></div >
+       <input onkeyup="buscarNome()" type="text" class="input telefone_user" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="width:150px; text-align: center; border:0; margin-top: -15px">
      <?php }else{ ?>
-       <div class="nome_user"> 
-       
-        <input type="text" class="input" id="nome" value="" placeholder="Nome Cliente" style="text-align: center; border-radius: 5px;">
-      </div >
-       <select class="input telefone_user" name="mesa" id="mesa" style="text-align: center; border-radius: 5px;">
+       <div class="nome_user"> <input type="text" class="input" id="nome" value="" placeholder="Nome Cliente" style="width:150px; text-align: center; border:0"></div >
+       <select class="input telefone_user" name="mesa" id="mesa" style="width:100px; text-align: center; border:0; margin-top: -15px">
         <option value="0">Mesa</option>
 
         <?php 
@@ -165,7 +156,7 @@ if($id_usuario != ''){
 <div class="accordion-item <?php echo $esconder_opc_delivery ?>">
   <h2 class="accordion-header" id="headingThree">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="colapse-3">
-      3 - SEU ENDEREÇO, OU ESCOLHA O LOCAL DE RETIRADA.
+      3 - ENDEREÇO OU UNIDADE DE RETIRADA
     </button>
   </h2>
   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -302,7 +293,7 @@ if($id_usuario != ''){
    <div id="pagar_pix" style="margin-top: 15px">
      <b>Pagar com Pix </b><br>
      Chave <?php echo $tipo_chave ?> <br> <input type="text" id="chave_pix_copia" value="<?php echo $chave_pix ?>" style="background: transparent; border:none;" readonly> <a class="link-neutro" href="#" onClick="copiar()"><i class="bi bi-clipboard text-primary"></i> <small><small>Copiar Pix</small></small> </a><br>
-     <small>Ao efetuar o pagamento nos encaminhar o comprovante no whatsapp.<span style="margin-left: 15px"><a target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone=<?php echo $whatsapp_sistema ?>" class="link-neutro"><i class="bi bi-whatsapp text-success"></i> <?php echo $telefone_sistema ?></a></span> </small>
+     <small>Ao efetuar o pagamento nos encaminhar o comprovante no whatsapp <span style="margin-left: 15px"><a target="_blank" href="http://api.whatsapp.com/send?1=pt_BR&phone=<?php echo $whatsapp_sistema ?>" class="link-neutro"><i class="bi bi-whatsapp text-success"></i> <?php echo $telefone_sistema ?></a></span> </small>
    </div>
 
 
@@ -317,7 +308,7 @@ if($id_usuario != ''){
         <input type="number" class="input" name="troco" id="troco">
         <span class="highlight"></span>
         <span class="bar"></span>
-        <label class="label">Vou precisar de troco para.</label>
+        <label class="label">Vou precisar de troco para</label>
       </div>
     </div>
   </div>
@@ -328,17 +319,30 @@ if($id_usuario != ''){
 
 <div id="pagar_credito" style="margin-top: 15px">
  <b>Pagar com Cartão de Crédito </b><br>       
- <small>O Pagamento será efetuado no ato da entrega com cartão de crédito.</small>
+ <small>O Pagamento será efetuado no ato da entrega com cartão de crédito</small>
 </div>
 
 <div id="pagar_debito" style="margin-top: 15px">
  <b>Pagar com Cartão de Débito </b><br>       
- <small>O Pagamento será efetuado no ato da entrega com cartão de débito.</small>
+ <small>O Pagamento será efetuado no ato da entrega com cartão de débito</small>
 </div>
 
 
 
 </div>
+
+
+
+ <div class="row" style="margin:10px" id="div_cupom">
+  <small><b>Tem Cupom?</b></small> 
+    <div class="col-md-2 col-9">             
+     <input class="form-control" type="text" name="cupom" id="cupom" placeholder="Código do Cupom"> 
+   </div>  
+   <div class="col-md-1 col-3">
+<button onclick="cupom()" class="btn btn-primary" type="button" name="btn_cupom" id="btn_cupom"><i class="bi bi-search"></i></button>
+   </div>
+  </div>
+
 
 <div class="group mt-4 mx-4" id="area-obs">
           <input type="text" class="input" name="obs" id="obs" value="">
@@ -353,6 +357,9 @@ if($id_usuario != ''){
 </div>
 
 
+
+
+
 </div>
 
 
@@ -363,7 +370,7 @@ if($id_usuario != ''){
 <input type="hidden" id="pagamento">
 <input type="hidden" id="taxa-entrega-input">
 <input type="hidden" id="id_cliente">
-
+<input type="hidden" id="valor-cupom">
 
 
 <div class="total-finalizar">
@@ -569,6 +576,11 @@ if($id_usuario != ''){
    var obs = $('#obs').val();
    var taxa_entrega = $('#taxa-entrega-input').val();
    var pedido_whatsapp = "<?=$status_whatsapp?>";
+   var cupom = $('#valor-cupom').val();
+
+   if(cupom == ""){
+    cupom = 0;
+   }
 
    if(taxa_entrega == ""){
     taxa_entrega = 0;
@@ -619,7 +631,7 @@ if($id_usuario != ''){
     return;
    }
 
-   var total_compra_final = parseFloat(total_compra) + parseFloat(taxa_entrega);
+   var total_compra_final = parseFloat(total_compra) + parseFloat(taxa_entrega) - parseFloat(cupom);
 
    var total_compra_finalF = total_compra_final.toFixed(2)
    
@@ -633,7 +645,7 @@ if($id_usuario != ''){
     $.ajax({
          url: 'js/ajax/inserir-pedido.php',
         method: 'POST',
-        data: {pagamento, entrega, rua, numero, bairro, complemento, troco, obs, nome_cliente, tel_cliente, id_cliente, mesa},
+        data: {pagamento, entrega, rua, numero, bairro, complemento, troco, obs, nome_cliente, tel_cliente, id_cliente, mesa, cupom},
         dataType: "html",
 
         success:function(result){
@@ -712,6 +724,8 @@ if($id_usuario != ''){
   function buscarNome(){
 
     var tel = $('#telefone').val(); 
+
+     var nome = $('#nome').val(); 
         
     $.ajax({
       url: 'js/ajax/listar-nome.php',
@@ -723,7 +737,10 @@ if($id_usuario != ''){
 
         var split = result.split("**");    
 
-        $('#nome').val(split[0]); 
+        if(nome == ""){
+          $('#nome').val(split[0]); 
+        }
+        
         $('#rua').val(split[1]); 
         $('#numero').val(split[2]); 
         $('#bairro').val(split[3]).change(); 
@@ -769,5 +786,43 @@ if($id_usuario != ''){
   $('#colapse-2').click();
   }
 
+  }
+
+
+
+
+  function cupom(){
+    var total_compra = "<?=$total_carrinho?>";
+    var taxa_entrega = $('#taxa-entrega-input').val();
+    if(taxa_entrega == ""){
+      taxa_entrega = 0;
+    }
+    var total_final = parseFloat(total_compra) + parseFloat(taxa_entrega);
+    var codigo_cupom = $('#cupom').val();
+    if(codigo_cupom == ""){
+      alert("Preencha o código do cupom");
+      return;
+    }
+
+     $.ajax({
+        url: 'js/ajax/cupom.php',
+        method: 'POST',
+        data: {total_final, codigo_cupom},
+        dataType: "text",
+
+        success: function (mensagem) {          
+        if(mensagem.trim() == '0'){
+           alert ('Código do Cupom Inválido');
+         }else{
+            var split = mensagem.split('**')
+            $('#total-carrinho-finalizar').text(split[0]);
+            $('#valor-cupom').val(split[1]);
+            $('#div_cupom').hide();
+            alert ('Cupom Inserido!');
+         }
+         
+        },      
+
+    });
   }
 </script>

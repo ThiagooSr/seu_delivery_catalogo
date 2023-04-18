@@ -49,7 +49,7 @@ $mais_sabores = $res[0]['mais_sabores'];
 </div>
 <ol class="list-group ">
 <?php }else{ ?>
-	<ol class="list-group " style="margin-top: 65px" >
+	<ol class="list-group " style="margin-top: 65px">
 <?php } ?>
 
 		<?php 
@@ -82,11 +82,15 @@ $mais_sabores = $res[0]['mais_sabores'];
 		$total_reg2 = @count($res2);		
 		if($total_reg2 == 0){
 
+$query3 = $pdo->query("SELECT * FROM guarnicoes where produto = '$id'");
+$res3 = $query3->fetchAll(PDO::FETCH_ASSOC);
+$total_guarn = @count($res3);			
+
 			//verificar se o produto tem adicionais
 $query3 = $pdo->query("SELECT * FROM adicionais where produto = '$id'");
 $res3 = $query3->fetchAll(PDO::FETCH_ASSOC);
 $total_adc = @count($res3);
-			if($total_adc > 0){
+			if($total_adc > 0 || $total_guarn > 0){
 				if($tem_estoque == 'Sim' and $estoque <= 0){
 					$url_produto = '#';
 				}else{
@@ -109,7 +113,6 @@ $total_adc = @count($res3);
 
 		<a href="<?php echo $url_produto ?>" class="link-neutro">
 		<li class="list-group-item d-flex justify-content-between align-items-start "> 
-			
 			
 				<img class="<?php echo $mostrar ?>" src="img/esgotado.png" width="65px" height="65px" style="position:absolute; right:0; top:0px">
 				<div class="row" style="width:100%">
@@ -154,7 +157,7 @@ $query2 = $pdo->query("SELECT * FROM variacoes where produto = '$id' and ativo =
 
 	
 
- </div>
+</div>
 			
 		</li>
 		</a>
