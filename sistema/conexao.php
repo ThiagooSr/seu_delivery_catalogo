@@ -1,18 +1,18 @@
 <?php 
 
-//dados locais
+/*/dados locais
 $usuario = 'root';
 $senha = '';
 $banco = 'delivery_interativo';
 $servidor = 'localhost';
-
-/*
-//servidor hospedado
-$usuario = 'hugocu75_interativo';
-$senha = 'interativoteste';
-$banco = 'hugocu75_interativo';
-$servidor = 'sh-pro24.hostgator.com.br';
 */
+
+//servidor hospedado
+$usuario = 'u384352927_seudelivery';
+$senha = 'Thiago199@2021';
+$banco = 'u384352927_recebadelivery';
+$servidor = 'recebadelivery.com';
+
 
 $url_sistema = "http://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);

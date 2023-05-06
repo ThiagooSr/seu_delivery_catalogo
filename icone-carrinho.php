@@ -10,8 +10,8 @@
 
 
 
-<div id="popup1" class="overlay">
-	<div class="popup">
+		<div id="popup1" class="overlay">
+		<div class="popup">
 		<div class="row">
 			<div class="col-9">
 				<h3 class="titulo-popup">SUB TOTAL <b>R$ <span id="total-carrinho-icone"></span></b></h3>

@@ -10,9 +10,9 @@ require_once("sistema/conexao.php");
 	<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<!-- Site Metas -->
-	<meta name="keywords" content="delivery interativo, pedir sanduíche" />
+	<meta name="keywords" content="Receba Delivery, pedir sanduíche" />
 	<meta name="description" content="Temos sanduíches de qualidade.." />
-	<meta name="author" content="Hugo Vasconcelos" />
+	<meta name="author" content="TCL Sistemas" />
 
 	<link rel="shortcut icon" href="img/<?php echo $favicon_sistema ?>" type="image/x-icon">
 

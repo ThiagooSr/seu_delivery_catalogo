@@ -18,7 +18,7 @@ $mais_sabores = $res[0]['mais_sabores'];
 
 <div class="main-container">
 
-	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+	<nav class="navbar fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-brand" >
 				<a href="index"><big><i class="bi bi-arrow-left"></i></big></a>

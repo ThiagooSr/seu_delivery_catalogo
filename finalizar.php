@@ -57,7 +57,7 @@ if($id_usuario != ''){
 
   <div class="main-container">
 
-  <nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
+  <nav class="navbar fixed-top" style="background-color: #e3f2fd;">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php">
         <img src="img/<?php echo $logo_sistema ?>" alt="" width="30" height="30" class="d-inline-block align-text-top">
@@ -81,8 +81,9 @@ if($id_usuario != ''){
        <img src="img/user.png" width="50px" height="50px" >
 
        <?php if($id_usuario == ""){ ?>
-       <div class="nome_user"> <input onclick="buscarNome()" type="text" class="input" name="nome" id="nome" required value="" placeholder="Seu Nome" style="width:150px; text-align: center; border:0"></div >
-       <input onkeyup="buscarNome()" type="text" class="input telefone_user" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="width:150px; text-align: center; border:0; margin-top: -15px">
+       <div class="nome_user"> <input onclick="buscarNome()" type="text" class="input form-control border border-secondary" name="nome" id="nome" required value="" placeholder="Seu Nome" style="width:150px; text-align: center; border:0"></div >
+       <p></p>
+       <input onkeyup="buscarNome()" type="text" class="input telefone_user form-control border border-secondary" name="telefone" id="telefone" required value="" placeholder="(00) 00000-0000" style="width:150px; text-align: center; border:0; margin-top: -10px">
      <?php }else{ ?>
        <div class="nome_user"> <input type="text" class="input" id="nome" value="" placeholder="Nome Cliente" style="width:150px; text-align: center; border:0"></div >
        <select class="input telefone_user" name="mesa" id="mesa" style="width:100px; text-align: center; border:0; margin-top: -15px">

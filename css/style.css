@@ -52,6 +52,16 @@ body{
 	text-decoration: none;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: #e3f2fd;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
 
 
 .carrinho{
@@ -280,7 +290,7 @@ body{
 
 
 .botao-carrinho{	
-	border-radius: 0px;
+	border-radius: 25px;
 	height:45px;
 }
 
@@ -438,10 +448,11 @@ body{
 .menos-mais{
 	width:35px;
 	height:32px;
-	background: #cecece;
+	background-color: rgb(255, 52, 73);
 	text-align:center;
 	display: inline-block;
 	font-size:17px;	
+  border-radius: 50px;
 }
 
 .qtd-item-carrinho{
@@ -505,8 +516,7 @@ body{
   background-color: green;
   padding:10px;
   color:#FFF;
-   border:0px;
-  border-radius:0px;
+  border-radius: 25px;
 }
 
 
@@ -515,8 +525,7 @@ body{
   background-color: red;
   padding:10px;
   color:#FFF;
-  border:0px;
-  border-radius:0px;
+  border-radius:25px;
 }
 
 

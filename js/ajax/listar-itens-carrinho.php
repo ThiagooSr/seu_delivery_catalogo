@@ -144,7 +144,7 @@ echo <<<HTML
 			<div id="popup-excluir{$id}" class="overlay-excluir">
 			<div class="popup">
 			<div class="row">
-			<div class="col-12">
+			<div class="col-12 mx-3" >
 			Confirmar Exclusão? <a href="#" onclick="excluirCarrinho('{$id}', '{$id_sabor}')" class="text-danger link-neutro">Sim</a>
 			</div>
 			<div class="col-3">

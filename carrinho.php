@@ -1,5 +1,5 @@
 <?php
-@session_start(); 
+@session_start();
 require_once("cabecalho.php");
 
 $sessao = $_SESSION['sessao_usuario'];
@@ -7,40 +7,32 @@ $sessao = $_SESSION['sessao_usuario'];
 ?>
 
 <style type="text/css">
-	body{
-		background:#f2f2f2;
-	}
+  body {
+    background: #f2f2f2;
+  }
 </style>
 
 <div class="main-container">
 
-	<nav class="navbar bg-light fixed-top" style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.20);">
-		<div class="container-fluid">
-			<div class="navbar-brand" >
-				<a href="index"><big><i class="bi bi-arrow-left"></i></big></a>
-				<span style="margin-left: 15px">RESUMO DO PEDIDO</span>
+  <nav class="navbar fixed-top" style="background-color: #e3f2fd;">
+    <div class="container">
+      
+      <span style="margin-left: 15px">RESUMO DO PEDIDO</span>
+      <a href="index" class="btn btn-outline-success" role="button">Comprar mais?</a>
+    </div>
 
-			</div>
-
-      <a class="text-dark" href="index.php" >
-          <div class="d-flex carrinho" style="color:blue"> 
-            <small><small>Comprar Mais?</small></small>
-          </div>
-        </a>
-
-			
-
-		</div>
-	</nav>
+</div>
+</nav>
 
 
 
 
-	<ol class="list-group" style="margin-top: 65px; margin-bottom: 95px; overflow: scroll; height:100%; scrollbar-width: thin;" id="listar-itens-carrinho">
+<ol class="list-group" style="margin-top: 65px; margin-bottom: 95px; overflow: scroll; height:100%; scrollbar-width: thin;" 
+  id="listar-itens-carrinho">
 
-		
 
-	</ol>
+
+</ol>
 
 
 
@@ -50,21 +42,22 @@ $sessao = $_SESSION['sessao_usuario'];
 
 
 <div class="area-pedidos">
-	<div class="total-pedido">
-		<big>
-		<span><b>SUB TOTAL</b></span>
-		<span class="direita">	<b>R$ <span id="total-do-pedido"></span></b></span>
-		</big>
-	</div>
+  <div class="total-pedido">
+    <big>
+      <span><b>SUB TOTAL</b></span>
+      <span class="direita"> <b>R$ <span id="total-do-pedido"></span></b></span>
+    </big>
+  </div>
 
 
-	<div class="d-grid gap-2 mt-4 abaixo">
-		<a href='finalizar' class="btn btn-primary botao-carrinho">Finalizar Pedido</a>
-	</div>
+  <div class="d-grid gap-2 mt-4 abaixo">
+    <a href='finalizar' class="btn btn-primary botao-carrinho">Finalizar Pedido</a>
+  </div>
 </div>
 
 
 </body>
+
 </html>
 
 
@@ -80,20 +73,22 @@ $sessao = $_SESSION['sessao_usuario'];
         <button type="button" id="btn-fechar-obs" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <form id="form-obs">
-      <div class="modal-body">
-       <div class="destaque-qtd">
-		<b>OBSERVAÇÕES</b>
-		<div class="form-group mt-3">
-			<textarea maxlength="255" class="form-control" type="text" name="obs" id="obs"></textarea>
-		</div>
-	</div>
+        <div class="modal-body">
+          <div class="destaque-qtd">
+            <b>OBSERVAÇÕES</b>
+            <div class="form-group mt-3">
+              <textarea maxlength="255" class="form-control" type="text" name="obs" id="obs"></textarea>
+            </div>
+          </div>
 
-	<input type="hidden" name="id" id="id_obs">
-	<br><small><div id="mensagem-obs" align="center"></div></small>
-      </div>
-      <div class="modal-footer">       
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </div>
+          <input type="hidden" name="id" id="id_obs">
+          <br><small>
+            <div id="mensagem-obs" align="center"></div>
+          </small>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
       </form>
     </div>
   </div>
@@ -110,67 +105,63 @@ $sessao = $_SESSION['sessao_usuario'];
         <h5 class="modal-title" id="exampleModalLabel"><span id="nome_item_adc"></span></h5>
         <button type="button" id="btn-fechar-adc" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
-      
-      <div class="modal-body">    
-     	<div id="listar-adc-carrinho">
-     		
-     	</div>
-      
+
+      <div class="modal-body">
+        <div id="listar-adc-carrinho">
+
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
 
 
 
-<script type="text/javascript">
+  <script type="text/javascript">
+    $(document).ready(function() {
+      listarCarrinho()
+    });
 
-	$(document).ready(function() {    		
-    listarCarrinho()    
-} );
-	
-function listarCarrinho(){
-	
-    $.ajax({
-         url: 'js/ajax/listar-itens-carrinho.php',
+    function listarCarrinho() {
+
+      $.ajax({
+        url: 'js/ajax/listar-itens-carrinho.php',
         method: 'POST',
         data: {},
         dataType: "html",
 
-        success:function(result){
-            $("#listar-itens-carrinho").html(result);
-           
+        success: function(result) {
+          $("#listar-itens-carrinho").html(result);
+
         }
-    });
-}
+      });
+    }
+  </script>
 
-</script>
 
+  <script type="text/javascript">
+    $("#form-obs").submit(function() {
 
-<script type="text/javascript">
-	
+      event.preventDefault();
+      var formData = new FormData(this);
 
-$("#form-obs").submit(function () {
-
-    event.preventDefault();
-    var formData = new FormData(this);
-
-    $.ajax({
+      $.ajax({
         url: 'js/ajax/editar-obs-carrinho.php',
         type: 'POST',
         data: formData,
 
-        success: function (mensagem) {
-            $('#mensagem-obs').text('');
-            $('#mensagem-obs').removeClass()
-            if (mensagem.trim() == "Salvo com Sucesso") {
-                $('#btn-fechar-obs').click();
-                listarCarrinho();
+        success: function(mensagem) {
+          $('#mensagem-obs').text('');
+          $('#mensagem-obs').removeClass()
+          if (mensagem.trim() == "Salvo com Sucesso") {
+            $('#btn-fechar-obs').click();
+            listarCarrinho();
 
-            } else {
+          } else {
 
-                $('#mensagem-obs').addClass('text-danger')
-                $('#mensagem-obs').text(mensagem)
-            }
+            $('#mensagem-obs').addClass('text-danger')
+            $('#mensagem-obs').text(mensagem)
+          }
 
 
         },
@@ -179,8 +170,7 @@ $("#form-obs").submit(function () {
         contentType: false,
         processData: false,
 
+      });
+
     });
-
-});
-
-</script>
+  </script>
