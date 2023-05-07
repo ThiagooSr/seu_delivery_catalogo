@@ -4,20 +4,20 @@
 $usuario = 'root';
 $senha = '';
 $banco = 'delivery_interativo';
-$servidor = 'localhost';
-*/
+$servidor = 'localhost';*/
+
 
 //servidor hospedado
-$usuario = 'u384352927_seudelivery';
+$usuario = 'u384352927_delivery';
 $senha = 'Thiago199@2021';
-$banco = 'u384352927_recebadelivery';
-$servidor = 'recebadelivery.com';
+$banco = 'u384352927_RecebaDelivery';
+$servidor = 'https://auth-db659.hstgr.io';
 
 
-$url_sistema = "http://$_SERVER[HTTP_HOST]/";
+$url_sistema = "https://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
 if($url[1] == 'localhost/'){
-	$url_sistema = "http://$_SERVER[HTTP_HOST]/delivery-interativo/";
+	$url_sistema = "https://$_SERVER[HTTP_HOST]/delivery-interativo/";
 }
 
 date_default_timezone_set('America/Sao_Paulo');
@@ -29,9 +29,9 @@ try {
 }
 
 
-$nome_sistema = 'Delivery Interativo';
-$email_sistema = 'contato@hugocursos.com.br';
-$telefone_sistema = '(31) 97527-5084';
+$nome_sistema = 'Receba Delivery';
+$email_sistema = 'thiagoosouzarodrigues@gmail.com';
+$telefone_sistema = '(62) 99173-0552';
 
 
 
